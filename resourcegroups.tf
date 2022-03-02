@@ -1,8 +1,82 @@
 ######################################
 # Resource Groups
-######################################
 
+
+######################################
+#Resource Groups
 resource "azurerm_resource_group" "rg1" {
+  name     = var.rg-vnet-conn-001-name
+  location = var.loc1
+  tags = {
+    Environment = var.environment_tag
+    Function    = "lab-resourcegroup"
+  }
+}
+resource "azurerm_resource_group" "rg2" {
+  name     = var.rg-vng-conn-001-name
+  location = var.loc1
+  tags = {
+    Environment = var.environment_tag
+    Function    = "lab-resourcegroup"
+  }
+
+resource "azurerm_resource_group" "rg3" {
+  name     = var.rg-azbast-conn-001-name
+  location = var.loc1
+  tags = {
+    Environment = var.environment_tag
+    Function    = "lab-resourcegroup"
+  }
+
+#Resource Groups
+resource "azurerm_resource_group" "rg4" {
+  name     = var.rg
+  location = var.loc1
+  tags = {
+    Environment = var.environment_tag
+    Function    = "lab-resourcegroup"
+  }
+
+#Resource Groups
+resource "azurerm_resource_group" "rg2" {
+  name     = var.rg-vng-conn-001-name
+  location = var.loc1
+  tags = {
+    Environment = var.environment_tag
+    Function    = "LAB"
+  }
+
+#Resource Groups
+resource "azurerm_resource_group" "rg2" {
+  name     = var.rg-vng-conn-001-name
+  location = var.loc1
+  tags = {
+    Environment = var.environment_tag
+    Function    = "ws-avd-lab-resourcegroups"
+  }
+
+#Resource Groups
+resource "azurerm_resource_group" "rg2" {
+  name     = var.rg-vng-conn-001-name
+  location = var.loc1
+  tags = {
+    Environment = var.environment_tag
+    Function    = "ws-avd-lab-resourcegroups"
+  }
+
+#Resource Groups
+resource "azurerm_resource_group" "rg2" {
+  name     = var.rg-vng-conn-001-name
+  location = var.loc1
+  tags = {
+    Environment = var.environment_tag
+    Function    = "ws-avd-lab-resourcegroups"
+  }
+
+
+
+
+resource "azurerm_resource_group" "rg3" {
   name     = "rg-${var.region1code}-management-prod"
   provider = azurerm.management
   location = var.region1
