@@ -1,4 +1,4 @@
-environment_tag             = "jakewalsh90-ansiblequickstart"
+environment_tag             = "mostafa-ansiblequickstart"
 azure-rg-1                  = "jakewalsh90-ansible"
 loc1                        = "uk south"
 region1-vnet1-name          = "region1-vnet1-ansible1"
