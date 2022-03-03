@@ -171,17 +171,3 @@ variable "vnet-dmz-prd-001-AzureBastionSubnet-range" {
   type        = string
 }
 
-##VMs
-variable "vmsize-domaincontroller1" {
-  description = "size of vm for domain controller"
-  type        = string
-}
-variable "adminusername" {
-  description = "administrator username for virtual machines"
-  type        = string
-}
-##TOD CHECK
-variable "region1-dc01-ip" {
-  description = "private IP for DC01 VM"
-  type        = string
-}
