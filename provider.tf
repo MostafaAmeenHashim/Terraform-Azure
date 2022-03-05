@@ -20,6 +20,15 @@ provider "azurerm" {
 ######################################
 # Platform Providers 
 ######################################
+
+# Connectivity
+provider "azurerm" {
+  features {}
+  alias           = "conn"
+  subscription_id = "1b5cd618-224f-42b9-8a33-8f34cdad87af"
+
+}
+
 # DMZ
 provider "azurerm" {
   features {}
@@ -27,13 +36,7 @@ provider "azurerm" {
   subscription_id = "1b5cd618-224f-42b9-8a33-8f34cdad87af"
 
 }
-# Connectivity
-provider "azurerm" {
-  features {}
-  alias           = "connectivity"
-  subscription_id = "1b5cd618-224f-42b9-8a33-8f34cdad87af"
 
-}
 # Identity
 provider "azurerm" {
   features {}

@@ -8,7 +8,7 @@
 resource "azurerm_availability_set" "avail-uks-adds1" {
   name                = "avail-uks-adds1"
   location            = var.loc1
-  resource_group_name = azurerm_resource_group.rg-vnet-ide-001.name
+  resource_group_name = azurerm_resource_group.rg4.name
   platform_fault_domain_count = 2
 
   tags = {
@@ -22,7 +22,7 @@ resource "azurerm_network_interface" "nic-vm-adds-dc-01" {
   name                = "nic-vm-adds-dc-01"
   location            = var.loc1
   provider            = azurerm.identity
-  resource_group_name = azurerm_resource_group.rg-vnet-ide-001.name
+  resource_group_name = azurerm_resource_group.rg4.name
 
   ip_configuration {
     name                          = "ipconfig-adds01"

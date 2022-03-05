@@ -40,7 +40,7 @@ resource "azurerm_virtual_network" "vnet-app-prd-001" {
 resource "azurerm_virtual_network" "vnet-dmz-prd-001" {
   name                = var.vnet-dmz-prd-001-name
   location            = var.loc1
-  resource_group_name = azurerm_resource_group.rg-10.name
+  resource_group_name = azurerm_resource_group.rg10.name
   address_space       = [var.vnet-dmz-prd-001-address-space]
   ##dns_servers         = ["10.10.1.4", "168.63.129.16",]
   tags = {

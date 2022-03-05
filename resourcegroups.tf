@@ -1,10 +1,9 @@
 ######################################
 # Resource Groups
 ######################################
-
 resource "azurerm_resource_group" "rg1" {
   name     = var.rg-vnet-conn-001-name
-  provider = azurerm.connectivity
+  provider = azurerm.conn
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -14,7 +13,7 @@ resource "azurerm_resource_group" "rg1" {
 
 resource "azurerm_resource_group" "rg2" {
   name     = var.rg-vng-conn-001-name
-  provider = azurerm.connectivity
+  provider = azurerm.conn
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -23,7 +22,7 @@ resource "azurerm_resource_group" "rg2" {
 }
 resource "azurerm_resource_group" "rg3" {
   name     = var.rg-azbast-conn-001-name
-  provider = azurerm.connectivity
+  provider = azurerm.conn
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -33,7 +32,7 @@ resource "azurerm_resource_group" "rg3" {
   
 resource "azurerm_resource_group" "rg4" {
   name     = var.rg-vnet-ide-001-name
-  provider = azurerm.ide
+  provider = azurerm.identity
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -42,7 +41,7 @@ resource "azurerm_resource_group" "rg4" {
 }
   resource "azurerm_resource_group" "rg5" {
   name     = var.rg-ide-conn-001-name
-  provider = azurerm.connectivity
+  provider = azurerm.conn
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -80,7 +79,7 @@ resource "azurerm_resource_group" "rg8" {
 }
 resource "azurerm_resource_group" "rg9" {
   name     = var.rg-route-conn-001-name
-  provider = azurerm.connectivity
+  provider = azurerm.conn
   location = var.loc1
   tags = {
     Environment = var.environment_tag

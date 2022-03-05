@@ -15,7 +15,7 @@ variable "rg-azbast-conn-001-name" {
   description = "Bas Conn resource group"
   type        = string
 }
-variable "rg-vnet-ide-001-name" {
+variable "rg-vnet-iden-001-name" {
   description = "Identity vnet resource group"
   type        = string
 }
@@ -25,7 +25,7 @@ variable "rg-ide-conn-001-name" {
   type        = string
 }
 
-variable "rg-rsv-ide-001-name" {
+variable "rg-rsv-iden-001-name" {
   description = "recovery vault identity resource group"
   type        = string
 }
@@ -125,7 +125,7 @@ variable "vnet-con-prd-001-AzureBastionSubnet-name" {
   type        = string
 }
 
-variable "vnet-ide-prd-001-subnet-ide-adds-001-name" {
+variable "vnet-ide-prd-001-subnet-iden-adds-001-name" {
   description = "subnet name"
   type        = string
 }
@@ -156,7 +156,7 @@ variable "vnet-con-prd-001-AzureBastionSubnet-range" {
   type        = string
 }
 
-variable "vnet-ide-prd-001-subnet-ide-adds-001-range" {
+variable "vnet-ide-prd-001-subnet-iden-adds-001-range" {
   description = "subnet range"
   type        = string
 }
