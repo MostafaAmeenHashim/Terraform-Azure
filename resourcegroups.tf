@@ -4,15 +4,17 @@
 
 resource "azurerm_resource_group" "rg1" {
   name     = var.rg-vnet-conn-001-name
+  provider = azurerm.connectivity
   location = var.loc1
   tags = {
     Environment = var.environment_tag
-    Function    = "lab-resourcegroup"
   }
 }
 
+
 resource "azurerm_resource_group" "rg2" {
   name     = var.rg-vng-conn-001-name
+  provider = azurerm.connectivity
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -21,6 +23,7 @@ resource "azurerm_resource_group" "rg2" {
 }
 resource "azurerm_resource_group" "rg3" {
   name     = var.rg-azbast-conn-001-name
+  provider = azurerm.connectivity
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -29,7 +32,8 @@ resource "azurerm_resource_group" "rg3" {
 }
   
 resource "azurerm_resource_group" "rg4" {
-  name     = var.rg-vnet-iden-001-name
+  name     = var.rg-vnet-ide-001-name
+  provider = azurerm.ide
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -37,7 +41,8 @@ resource "azurerm_resource_group" "rg4" {
   }
 }
   resource "azurerm_resource_group" "rg5" {
-  name     = var.rg-identity-conn-001-name
+  name     = var.rg-ide-conn-001-name
+  provider = azurerm.connectivity
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -46,7 +51,8 @@ resource "azurerm_resource_group" "rg4" {
   }
 
 resource "azurerm_resource_group" "rg6" {
-  name     = var.rg-rsv-iden-001-name
+  name     = var.rg-rsv-ide-001-name
+  provider = azurerm.identity
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -55,6 +61,7 @@ resource "azurerm_resource_group" "rg6" {
 }
 resource "azurerm_resource_group" "rg7" {
   name     = var.rg-vnet-app-001-name
+  provider = azurerm.application
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -64,6 +71,7 @@ resource "azurerm_resource_group" "rg7" {
 
 resource "azurerm_resource_group" "rg8" {
   name     = var.rg-rsv-app-001-name
+  provider = azurerm.application
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -72,6 +80,7 @@ resource "azurerm_resource_group" "rg8" {
 }
 resource "azurerm_resource_group" "rg9" {
   name     = var.rg-route-conn-001-name
+  provider = azurerm.connectivity
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -80,6 +89,7 @@ resource "azurerm_resource_group" "rg9" {
 }
   resource "azurerm_resource_group" "rg10" {
   name     = var.rg-vnet-dmz-001-name
+  provider = azurerm.dmz
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -88,6 +98,7 @@ resource "azurerm_resource_group" "rg9" {
   } 
   resource "azurerm_resource_group" "rg11" {
   name     = var.rg-vng-dmz-001-name
+  provider = azurerm.dmz
   location = var.loc1
   tags = {
     Environment = var.environment_tag
@@ -96,26 +107,29 @@ resource "azurerm_resource_group" "rg9" {
   }
  resource "azurerm_resource_group" "rg12" {
   name     = var.rg-azbast-dmz-001-name
+  provider = azurerm.dmz
   location = var.loc1
   tags = {
     Environment = var.environment_tag
     Function    = "lab-resourcegroup"
-  }
+   }
  }
  resource "azurerm_resource_group" "rg13" {
   name     = var.rg-rsv-dmz-001-name
+  provider = azurerm.dmz
   location = var.loc1
   tags = {
     Environment = var.environment_tag
     Function    = "lab-resourcegroup"
-  }
+    }
 
  }
  resource "azurerm_resource_group" "rg14" {
   name     = var.rg-route-dmz-001-name
+  provider = azurerm.dmz
   location = var.loc1
   tags = {
     Environment = var.environment_tag
     Function    = "lab-resourcegroup"
-  }
+    }
  }

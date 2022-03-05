@@ -2,11 +2,15 @@
 # Providers 
 ######################################
 terraform {
-
   required_providers {
     azurerm = {
+      # Specify what version of the provider we are going to utilise
       source  = "hashicorp/azurerm"
-      version = "2.94.0"
+      version = "2.98.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "3.1.0"
     }
   }
 }
@@ -19,7 +23,7 @@ provider "azurerm" {
 # DMZ
 provider "azurerm" {
   features {}
-  alias           = "DMZ"
+  alias           = "dmz"
   subscription_id = "1b5cd618-224f-42b9-8a33-8f34cdad87af"
 
 }
@@ -36,6 +40,14 @@ provider "azurerm" {
   alias           = "identity"
   subscription_id = "1b5cd618-224f-42b9-8a33-8f34cdad87af"
 }
+
+# Application
+provider "azurerm" {
+  features {}
+  alias           = "application"
+  subscription_id = "1b5cd618-224f-42b9-8a33-8f34cdad87af"
+}
+
 
 ######################################
 # Backend 
