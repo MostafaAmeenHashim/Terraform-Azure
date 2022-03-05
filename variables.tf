@@ -15,17 +15,17 @@ variable "rg-azbast-conn-001-name" {
   description = "Bas Conn resource group"
   type        = string
 }
-variable "rg-vnet-iden-001-name" {
+variable "rg-vnet-ide-001-name" {
   description = "Identity vnet resource group"
   type        = string
 }
 
-variable "rg-identity-conn-001-name" {
+variable "rg-ide-conn-001-name" {
   description = "Identity conn vnet resource group"
   type        = string
 }
 
-variable "rg-rsv-iden-001-name" {
+variable "rg-rsv-ide-001-name" {
   description = "recovery vault identity resource group"
   type        = string
 }
@@ -71,6 +71,8 @@ variable "loc1" {
   description = "The location for this Lab environment"
   type        = string
 }
+
+##vnet names
 variable "vnet-con-prd-001-name" {
   description = "vnet-con-prd-001"
   type        = string
@@ -123,7 +125,7 @@ variable "vnet-con-prd-001-AzureBastionSubnet-name" {
   type        = string
 }
 
-variable "vnet-ide-prd-001-subnet-iden-adds-001-name" {
+variable "vnet-ide-prd-001-subnet-ide-adds-001-name" {
   description = "subnet name"
   type        = string
 }
@@ -154,7 +156,7 @@ variable "vnet-con-prd-001-AzureBastionSubnet-range" {
   type        = string
 }
 
-variable "vnet-ide-prd-001-subnet-iden-adds-001-range" {
+variable "vnet-ide-prd-001-subnet-ide-adds-001-range" {
   description = "subnet range"
   type        = string
 }
@@ -168,6 +170,22 @@ variable "vnet-dmz-prd-001-GatewaySubnet-range" {
 }
 variable "vnet-dmz-prd-001-AzureBastionSubnet-range" {
   description = "subnet range"
+  type        = string
+}
+
+
+variable "vmsize-domaincontroller" {
+  description = "size of vm for domain controller"
+  type        = string
+}
+variable "adminusername" {
+  description = "administrator username for virtual machines"
+  type        = string
+}
+
+
+variable "Azbast-conn-001-name" {
+  description = "host Bastion for conn sub"
   type        = string
 }
 
